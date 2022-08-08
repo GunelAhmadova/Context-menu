@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+
+
+body {  
+     height: 10vh; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+  .context { 
+    position: absolute;
+    visibility: hidden;
+      width: 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 12px 35px rgba(0, 0,0.1);
+      ul { 
+        padding: 0;
+        list-style: none;
+        font-size: 32px;  
+        
+        .myBorder {
+          border-bottom: 1px solid #e3e3e3;  
+         
+        }
+        .dropdown {
+          width: 100%;
+          &:hover .dropdownUl{
+            left: 300px;
+            opacity: 1;
+            visibility: visible;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 0 0 70px;
+            
+              
+          }
+          display: inline-block;
+          position: relative;
+          .dropdownUl {
+            transition: 0.1s linear;
+            opacity: 0;
+            visibility: hidden;
+            list-style: none;
+            margin: 0 !important;
+            padding: 0 !important;
+            position: absolute;
+            left: 320px;
+            top: 0;
+            width: 100%; 
+            padding-right: 10px; 
+            a{
+              text-decoration: none;
+            } 
+             .links{
+               color: red;
+
+             } 
+             .active {
+                 color: blue;
+                 font-size: 20px;
+                 
+             }
+          }
+        }
+    
+        li {
+          &:hover {
+            background-color: #e3e3e3;
+
+             margin-right: 70px; 
+             border-radius: 5px;
+            .chevron {
+              right: 0;
+            }
+          } i{
+              margin-right: 10px;
+          }
+          transition: 0.1s ease-in-out;
+          padding: 10px 0 0 25px;
+          font-size: 16px;
+          color: grey;
+          position: relative;
+          cursor: pointer;
+          .chevron {
+            position: absolute;
+            right: 20px;
+            transition: 0.1s linear;
+          }
+        }
+      }
+    }
+      }
